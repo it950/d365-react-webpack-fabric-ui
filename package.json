@@ -1,0 +1,43 @@
+{
+  "name": "d365-react-webpack-fabric-ui",
+  "version": "0.0.1",
+  "description": "Microsoft Dynamics CRM 365 application built using React, Webpack, and Microsoft Office UI Fabric.",
+  "main": "index.js",
+  "repository": "https://github.com/iwaldman/d365-react-webpack-fabric-ui.git",
+  "author": "Irvin M. Waldman",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack -p",
+    "dev": "webpack -d",
+    "dev-server": "webpack-dev-server",
+    "format": "prettier-eslint --write --trailing-comma es5 \"src/**/*.js\"",
+    "eslint": "eslint --fix \"src/**/*.js\""
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.6.1",
+    "eslint-plugin-react": "^7.3.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "prettier-eslint-cli": "4.3.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "office-ui-fabric-react": "^4.44.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-prop-types": "^0.4.0",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
