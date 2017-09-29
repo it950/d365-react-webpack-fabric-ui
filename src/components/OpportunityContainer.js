@@ -6,7 +6,7 @@ import OpportunityList from './OpportunityList'
 import OpportunityPanel from './OpportunityPanel'
 import opportunities from '../fixtures/opportunities.js'
 
-class App extends Component {
+class OpportunityContainer extends Component {
   state = {
     showPanel: false,
     opportunities: [],
@@ -75,4 +75,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default OpportunityContainer
