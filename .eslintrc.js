@@ -7,7 +7,7 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: [ 'eslint:recommended', 'plugin:react/recommended' ],
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
   parserOptions: {
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
@@ -15,13 +15,13 @@ module.exports = {
     },
     sourceType: 'module',
   },
-  plugins: [ 'react' ],
+  plugins: ['react'],
   rules: {
-    'react/prop-types': [ 'off' ],
-    indent: [ 'error', 2, { SwitchCase: 1 } ],
-    'linebreak-style': [ 'error', 'unix' ],
-    quotes: [ 'error', 'single' ],
-    semi: [ 'error', 'never' ],
-    'no-console': [ 'warn', { allow: [ 'info', 'error', 'dir' ] } ],
+    'react/prop-types': ['off'],
+    indent: ['error', 2, { SwitchCase: 1 }],
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single'],
+    semi: ['error', 'never'],
+    'no-console': ['warn', { allow: ['info', 'error', 'dir'] }],
   },
 }
