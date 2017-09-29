@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Opportunity = ({ opportunity }) => {
+const OpportunityListItem = ({ opportunity }) => {
   /*eslint no-undef: 0*/
   // const url = Xrm.Page.context.prependOrgName(
   //   `/main.aspx?pagetype=entityrecord&etn=opportunity&id=${opportunity.opportunityid}`,
@@ -17,4 +17,4 @@ const Opportunity = ({ opportunity }) => {
   )
 }
 
-export default Opportunity
+export default OpportunityListItem

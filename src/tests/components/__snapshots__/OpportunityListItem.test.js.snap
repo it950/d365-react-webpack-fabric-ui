@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpportunityListItem should render correctly 1`] = `
+<li>
+  <p>
+    <a
+      href="#"
+      target="_blank"
+    >
+      Test
+    </a>
+  </p>
+  <p>
+    Created On 
+    0
+  </p>
+</li>
+`;

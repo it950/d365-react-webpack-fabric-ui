@@ -7,11 +7,14 @@
   "author": "Irvin M. Waldman",
   "license": "MIT",
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack --progress -p",
     "dev": "webpack -d",
     "dev-server": "webpack-dev-server",
     "format": "prettier-eslint --write --trailing-comma es5 \"src/**/*.js\"",
-    "eslint": "eslint --fix \"src/**/*.js\""
+    "eslint": "eslint \"src/**/*.js\"",
+    "test": "jest --colors",
+    "test-watch": "npm run test -- --watch",
+    "test-coverage": "npm run test -- --coverage"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -23,10 +26,13 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.7",
+    "enzyme": "^2.0.0",
+    "enzyme-to-json": "^2.0.1",
     "eslint": "^4.6.1",
     "eslint-plugin-react": "^7.3.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.30.1",
+    "jest": "^20.0.4",
     "prettier-eslint-cli": "4.3.0",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.6",
@@ -39,5 +45,11 @@
     "react-dom": "^15.6.1",
     "react-prop-types": "^0.4.0",
     "whatwg-fetch": "^2.0.3"
+  },
+  "jest": {
+    "modulePaths": [ "./src" ],
+    "testPathIgnorePatterns": [ "/public/", "/coverage/", "/node_modules/" ],
+    "snapshotSerializers": [ "enzyme-to-json/serializer" ],
+    "collectCoverageFrom": [ "src/**/*.js", "!src/index.js" ]
   }
 }

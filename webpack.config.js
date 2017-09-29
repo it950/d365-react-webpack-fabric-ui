@@ -43,18 +43,19 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ inject: true,
-      template: htmlPath}),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: htmlPath,
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       filename: 'vendor.js',
     }),
-    new ExtractTextPlugin('styles.css'),    
+    new ExtractTextPlugin('styles.css'),
   ],
   devServer: {
     contentBase: publicPath,
     compress: true,
-    port: 5000,
-    stats: 'errors-only',
+    port: 3000,
   },
 }

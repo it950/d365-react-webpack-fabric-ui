@@ -4,6 +4,7 @@ import { Spinner, SpinnerSize } from 'office-ui-fabric-react/lib/Spinner'
 
 import OpportunityList from './OpportunityList'
 import OpportunityPanel from './OpportunityPanel'
+import opportunities from '../../db.js'
 
 class App extends Component {
   state = {
@@ -22,34 +23,16 @@ class App extends Component {
     //     '&$top=10' +
     //     '&$select=opportunityid,name,createdon',
     // )
+
+    // const response = fetch(url, {
+    //   credentials: 'same-origin',
+    // })
+
     // fetch(url, {
     //   credentials: 'same-origin',
     // })
     //   .then(res => res.json())
     //   .then(json => this.setState({ opportunities: json.value }))
-
-    const opportunities = [
-      {
-        opportunityid: 1001,
-        name: 'Big Sale',
-        createdon: Date.now().toLocaleString(),
-      },
-      {
-        opportunityid: 1002,
-        name: '2018 Restocking',
-        createdon: Date.now().toLocaleString(),
-      },
-      {
-        opportunityid: 1003,
-        name: '2017 Q4 Reorder',
-        createdon: Date.now().toLocaleString(),
-      },
-      {
-        opportunityid: 1004,
-        name: 'End-of-Year Firesale',
-        createdon: Date.now().toLocaleString(),
-      },
-    ]
 
     setTimeout(() => this.setState({ opportunities }), 1000)
   }
