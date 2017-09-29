@@ -4,7 +4,7 @@ import { Spinner, SpinnerSize } from 'office-ui-fabric-react/lib/Spinner'
 
 import OpportunityList from './OpportunityList'
 import OpportunityPanel from './OpportunityPanel'
-import opportunities from '../../db.js'
+import opportunities from '../fixtures/opportunities.js'
 
 class App extends Component {
   state = {
@@ -50,7 +50,13 @@ class App extends Component {
     return (
       <div>
         <h1>Opportunity Summary</h1>
-        {opportunities.length > 0 ? (
+        {opportunities.length === 0 ? (
+          <Spinner
+            size={SpinnerSize.large}
+            label="Loading opportunities..."
+            ariaLive="assertive"
+          />
+        ) : (
           <div>
             <OpportunityList opportunities={this.state.opportunities} />
             <DefaultButton
@@ -63,12 +69,6 @@ class App extends Component {
               onClosePanel={this.handleClosePanel}
             />
           </div>
-        ) : (
-          <Spinner
-            size={SpinnerSize.large}
-            label="Loading opportunities..."
-            ariaLive="assertive"
-          />
         )}
       </div>
     )

@@ -48,8 +48,21 @@
   },
   "jest": {
     "modulePaths": [ "./src" ],
-    "testPathIgnorePatterns": [ "/public/", "/coverage/", "/node_modules/" ],
+    "testPathIgnorePatterns": [
+      "/public/",
+      "/coverage/",
+      "/fixtures/",
+      "/constants",
+      "/node_modules/"
+    ],
     "snapshotSerializers": [ "enzyme-to-json/serializer" ],
-    "collectCoverageFrom": [ "src/**/*.js", "!src/index.js" ]
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js",
+      "!**/node_modules/**",
+      "!**/public/**",
+      "!**/fixtures/**",
+      "!**/constants/**"
+    ]
   }
 }

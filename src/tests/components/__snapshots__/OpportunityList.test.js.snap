@@ -1,3 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OpportunityList should render correctly 1`] = `<ul />`;
+exports[`OpportunityList should render correctly with no opportunities 1`] = `<ul />`;
+
+exports[`OpportunityList should render correctly with opportunities 1`] = `
+<ul>
+  <OpportunityListItem
+    key="1001"
+    opportunity={
+      Object {
+        "createdon": "2017-9-21 00:00:00",
+        "name": "Big Sale",
+        "opportunityid": 1001,
+      }
+    }
+  />
+  <OpportunityListItem
+    key="1002"
+    opportunity={
+      Object {
+        "createdon": "2017-10-20 00:00:00",
+        "name": "2018 Restocking",
+        "opportunityid": 1002,
+      }
+    }
+  />
+  <OpportunityListItem
+    key="1003"
+    opportunity={
+      Object {
+        "createdon": "2017-6-15 00:00:00",
+        "name": "2017 Q4 Reorder",
+        "opportunityid": 1003,
+      }
+    }
+  />
+  <OpportunityListItem
+    key="1004"
+    opportunity={
+      Object {
+        "createdon": "2017-12-1 00:00:00",
+        "name": "End-of-Year Firesale",
+        "opportunityid": 1004,
+      }
+    }
+  />
+</ul>
+`;
