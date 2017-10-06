@@ -1,15 +1,37 @@
 {
   "presets": [
     "react",
-    [
-      "env", 
-      {
-        "targets": 
-        {
-          "node": "current"
-        }
-      }
-    ], 
     "stage-2"
-  ]
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        "env"
+      ],
+      "plugins": ["transform-class-properties"]
+    },
+    "production": {
+      "presets": [
+        [
+          "env",
+          {
+            "es2015": {
+              "modules": false
+            },
+            "targets": {
+              "ie": 9,
+              "uglify": true
+            }
+          }
+        ]
+      ],
+      "plugins": ["transform-class-properties"]
+    },
+    "test": {
+      "presets": [
+        "env"
+      ],
+      "plugins": ["transform-class-properties"]
+    }
+  }
 }

@@ -7,11 +7,12 @@
   "author": "Irvin M. Waldman",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --progress -p",
-    "dev": "webpack -d",
+    "build": "cross-env NODE_ENV=production webpack --progress -p --env production",
+    "dev": "cross-env NODE_ENV=development webpack -d",
     "dev-server": "webpack-dev-server",
     "format": "prettier-eslint --write --trailing-comma es5 \"src/**/*.js\"",
-    "eslint": "eslint \"src/**/*.js\"",
+    "lint": "esw webpack.config.* \"src/**/*.js\" --color",
+    "lint-watch": "npm run lint -- --watch",
     "test": "jest --colors",
     "test-watch": "npm run test -- --watch",
     "test-coverage": "npm run test -- --coverage"
@@ -25,11 +26,14 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "enzyme": "^2.9.1",
     "enzyme-to-json": "^2.0.1",
     "eslint": "^4.6.1",
+    "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-react": "^7.3.0",
+    "eslint-watch": "^3.1.2",
     "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^20.0.4",
@@ -48,9 +52,7 @@
     "whatwg-fetch": "^2.0.3"
   },
   "jest": {
-    "modulePaths": [
-      "./src"
-    ],
+    "modulePaths": [ "./src" ],
     "testPathIgnorePatterns": [
       "/public/",
       "/coverage/",
@@ -58,9 +60,7 @@
       "/constants",
       "/node_modules/"
     ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
+    "snapshotSerializers": [ "enzyme-to-json/serializer" ],
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
